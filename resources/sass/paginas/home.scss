@@ -1,0 +1,411 @@
+.about_me {
+    background-color: #000;
+
+    padding: 80px 0;
+    @include desktop {
+        padding: 0px;
+    }
+    .container {
+        .content {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                width: 100%;
+                @include desktop {
+                    width: 46%;
+                }
+            }
+            .text {
+                width: 100%;
+                color: #fff;
+                @include desktop {
+                    width: 50%;
+                }
+                .tittle {
+                    font-size: 36px;
+                    font-family: 'Montserrat Medium';
+                    line-height: 57px;
+                    font-style: italic;
+                    margin-bottom: 70px;
+                }
+                .description {
+                    p {
+                        font-size: 18px;
+                        line-height: 26px;
+                        font-family: 'Montserrat Regular';
+                        margin-bottom: 40px;
+                    }
+                }
+                .btn-principal {
+                    margin-top: 70px;
+                }
+            }
+        }
+    }
+}
+
+.events {
+    .container {
+        background-color: #f5f5f5;
+
+        .content {
+            padding: 50px 0;
+            .tittle {
+                width: max-content;
+                display: block;
+                margin: 0 auto 50px auto;
+                font-size: 36px;
+                font-family: 'Montserrat Medium';
+                line-height: 57px;
+                font-style: italic;
+                &:after {
+                    background-color: #000;
+                }
+            }
+            .list {
+                display: inline-flex;
+                flex-wrap: wrap;
+                width: 100%;
+                .item {
+                    display: inline-flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    justify-content: space-between;
+                    margin-bottom: 90px;
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                    img {
+                        width: 100%;
+                        order: 0;
+                        margin-bottom: 20px;
+                        @include desktop {
+                            width: 47%;
+                            order: 1;
+                        }
+                    }
+                    .text {
+                        width: 100%;
+                        order: 0;
+                        @include desktop {
+                            order: 0;
+                            width: 50%;
+                        }
+                        .tittle {
+                            font-size: 20px;
+                            margin: 0 0 50px 0;
+                            line-height: 35px;
+                            max-width: 100%;
+                            @include desktop {
+                                font-size: 24px;
+                                line-height: 43px;
+                            }
+                        }
+                        .description {
+                            p {
+                                font-size: 18px;
+                                line-height: 26px;
+                                margin-bottom: 30px;
+                                &:last-child {
+                                    margin-bottom: 0px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(2n+2) {
+                        img {
+                            @include desktop {
+                                order: 0;
+                            }
+                        }
+                        .text {
+                            @include desktop {
+                                order: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.our-courses {
+    background-color: #000;
+    .container {
+        .content {
+            padding: 50px 0;
+            .tittle {
+                width: max-content;
+                color: #ececec;
+                display: block;
+                margin: 0 auto 50px auto;
+                font-size: 36px;
+                font-family: 'Montserrat Medium';
+                line-height: 57px;
+                font-style: italic;
+                &:after {
+                    background-color: #ececec;
+                    max-width: 100%;
+                }
+            }
+            .list {
+                display: inline-flex;
+                flex-wrap: wrap;
+                width: 100%;
+                .item {
+                    display: inline-flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    justify-content: space-between;
+                    margin-bottom: 50px;
+                    padding-bottom: 50px;
+                    position: relative;
+                    &:after {
+                        width: 45%;
+                        max-width: 655px;
+                        height: 4px;
+                        position: absolute;
+                        content: " ";
+                        background-color: #ececec;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                    }
+                    &:last-child {
+                        margin-bottom: 0px;
+                        padding-bottom: 0;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        order: 0;
+                        margin-bottom: 20px;
+                        border-radius: 15px;
+                        @include desktop {
+                            width: 32%;
+                            order: 1;
+                        }
+                    }
+                    .text {
+                        width: 100%;
+                        order: 0;
+                        color: #ececec;
+                        @include desktop {
+                            order: 0;
+                            width: 60%;
+                        }
+                        .tittle {
+                            font-size: 20px;
+                            margin: 0 0 50px 0;
+                            line-height: 35px;
+                            max-width: 100%;
+                            @include desktop {
+                                font-size: 24px;
+                                line-height: 43px;
+                            }
+                            &:after {
+                                display: none;
+                            }
+                        }
+                        .description {
+                            p {
+                                font-size: 18px;
+                                line-height: 26px;
+                                margin-bottom: 30px;
+                                &:last-child {
+                                    margin-bottom: 0px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(2n+2) {
+                        img {
+                            @include desktop {
+                                order: 0;
+                            }
+                        }
+                        .text {
+                            @include desktop {
+                                order: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.videos {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+    .content {
+        .tittle {
+            width: max-content;
+            color: #000;
+            display: block;
+            margin: 0 auto 50px auto;
+            font-size: 36px;
+            font-family: 'Montserrat Medium';
+            line-height: 57px;
+            font-style: italic;
+            &:after {
+                background-color: #000;
+                max-width: 100%;
+            }
+        }
+        .text {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            justify-content: center;
+            @include desktop {
+                justify-content: flex-start;
+                margin: 0 25px;
+                margin-bottom: 50px;
+            }
+            .subTittle {
+                font-family: 'Montserrat Medium';
+                font-size: 22px;
+                font-style: italic;
+                line-height: 35px;
+                @include desktop {
+                    font-size: 36px;
+                    line-height: 57px;
+                }
+            }
+            .btn-principal {
+                border-color: #000;
+                color: #000;
+                padding: 10px 25px;
+                margin: 0 34px;
+            }
+        }
+        .list {
+            width: 100%;
+            display: block;
+            .slick-track {
+                align-items: baseline;
+            }
+            .item {
+                width: 100%;
+                display: block;
+                margin: 0 25px;
+                img {
+                    width: 100%;
+                }
+                .video-tittle {
+                    font-size: 16px;
+                    font-family: 'Montserrat Medium';
+                    margin: 20px 0;
+                }
+            }
+            .slick-dots {
+                li {
+                    width: 15px;
+                    height: 15px;
+                    button {
+                        width: 15px;
+                        height: 15px;
+                        padding: 0;
+                        border-radius: 50%;
+                        border: 1px solid #000;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    &.slick-active {
+                        button {
+                            border: 5px solid #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.contact-me {
+    background-color: #000;
+    padding: 50px 0;
+    color: #ececec;
+    .container {
+        .content {
+            display: inline-flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+            .text {
+                width: 100%;
+                @include desktop {
+                    width: 68%;
+                }
+                .tittle {
+                    font-size: 36px;
+                    font-family: 'Montserrat Medium';
+                    line-height: 57px;
+                    font-style: italic;
+                    margin-bottom: 50px;
+                    color: #ececec;
+                    &:after {
+                        background-color: #ececec;
+                    }
+                }
+                .items {
+                    display: inline-flex;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    justify-content: space-between;
+                    text-align: center;
+                    @include tablet {
+                        text-align: left;
+                    }
+                    .item {
+                        width: 100%;
+                        @include tablet {
+                            width: auto;
+                        }
+                        h3 {
+                            font-size: 24px;
+                            font-family: 'Montserrat Bold';
+                            text-decoration: underline;
+                        }
+                        .details {
+                            display: inline-flex;
+                            align-items: center;
+                            margin-top: 10px;
+                            a {
+                                color: #ececec;
+                                margin: 0 3px;
+                                i {
+                                    color: #ececec;
+                                    margin-right: 10px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .img-contact {
+                width: auto;
+                display: block;
+                margin: 25px auto 0 auto;
+                max-width: 35%;
+                border-radius: 50%;
+                filter: opacity(0.7);
+                @include desktop {
+                    max-width: 18%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

@@ -13,14 +13,17 @@
             <div class="logo">
                 <img src="<?=URL_BASE?>resources/imagens/logo.png" alt="Logo LALD Home">
             </div>
+            <div class="btn-menu">
+                <span>menu</span>
+            </div>
             <div class="header">
                 <div class="menu">
                     <ul>
-                        <li><a href="#">Quem Sou Eu</a></li>
-                        <li><a href="#">Eventos</a></li>
-                        <li><a href="#">Cursos</a></li>
-                        <li><a href="#">Vídeos</a></li>
-                        <li><a href="#">Fale Comigo</a></li>
+                        <li><a href="about_me">Quem Sou Eu</a></li>
+                        <li><a href="events">Eventos</a></li>
+                        <li><a href="our-courses">Cursos</a></li>
+                        <li><a href="videos">Vídeos</a></li>
+                        <li><a href="contact-me">Fale Comigo</a></li>
                     </ul>
                 </div>
                 <div class="social">

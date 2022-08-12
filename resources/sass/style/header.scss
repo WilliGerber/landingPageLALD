@@ -11,38 +11,107 @@ header{
     position: fixed;
     z-index: 2;
     .container {
+        width: 100%;
         display: inline-flex;
         justify-content: space-between;
         align-items: center;
         color: white;
         padding: 15px 25px;
-        .header {
+        .btn-menu {
+            color: #fff;
+            height: 100%;
             display: inline-flex;
             align-items: center;
-            justify-content: flex-end;
-            width: 100%;
+            padding: 0 20px;
+            background-color: #333;
+            cursor: pointer;
+            @include desktop {
+                display: none;
+            }
+        }
+        .header {
+            &.active {
+                right: 0;
+                &:before {
+                    width: 100vw;
+                    @include desktop {
+                        display: none;
+                    }
+                }
+            }
+            &:before {
+                width: 0;
+                height: 100%;
+                background-color: #31313149;
+                content: " ";
+                position: absolute;
+                left: -100vw;
+            }
+            display: block;
+            position: fixed;
+            right: -250px;
+            top: 87px;
+            width: 250px;
+            background-color: #f5f5f5;
+
+            height: calc(100vh - 87px);
+            transition: .5s;
+            @include desktop {
+                display: inline-flex;
+                position: relative;
+                align-items: center;
+                justify-content: flex-end;
+                width: 100%;  
+                right: initial;
+                top: initial;
+                background-color: transparent;
+                height: initial;
+            }
             .menu {
                 width: 100%;
-                width: auto;
+                display: block;
+                @include desktop {
+                    width: 100%;
+                    display: inline-flex;
+                    justify-content: center;
+                }
                 ul{
+                    flex-wrap: wrap;
                     display: inline-flex;
                     width: auto;
                     justify-content: space-between;
+                    @include desktop {
+                        flex-wrap: nowrap;
+                    }
                     li {
-                        padding: 0 45px;
+                        width: 100%;
+                        padding: 10px 10px;
+                        @include desktop {
+                            padding: 0 25px;
+                            width: auto;
+                        }
+                        @include desktop-hd {
+                            padding: 0 45px;
+                        }
                         a {
-                            color: #fff;
+                            color: #333;
                             position: relative;
                             padding: 7px 0;
+                            @include desktop {
+                                color: #fff;
+                            }
                             &:after{
+                                background-color: #333;
                                 width: 0%;
                                 height: 2px;
-                                background-color: #fff;
                                 content: ' ';
                                 bottom: 0px;
                                 position: absolute;
                                 left: 0px;
                                 transition: .25s;
+                                @include desktop {
+                                    background-color: #fff;
+                                }
                             }
                             &:hover {
                                 &:after {
@@ -55,13 +124,28 @@ header{
                 }
             }
             .social {
-                padding-left: 45px;
+                color: #333;
+                padding: 10px;
+                width: 100%;
                 display: inline-flex;
                 align-items: center;
+                @include desktop {
+                    color: #fff;
+                    width: auto;
+                    padding: 0;
+                    min-width: 130px
+                }
+                @include desktop-hd {
+                    padding: 0 45px;
+                    min-width: 240px
+
+                }
                 a{
                     margin-left: 14px;
-                    i{
-                        color: #fff;
+                    @include desktop {
+                        i{
+                            color: #fff;
+                        }
                     }
                 }
             }

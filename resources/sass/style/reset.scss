@@ -1,8 +1,10 @@
 $tablet:			768;
 $desktop:			1024;
+$desktop-hd:		1400;
 
 @mixin tablet		{ @media screen and (min-width: #{$tablet}px) { @content; } }
 @mixin desktop		{ @media screen and (min-width: #{$desktop}px) { @content; } }
+@mixin desktop-hd	{ @media screen and (min-width: #{$desktop-hd}px) { @content; } }
 
 
 html, body, div, span, applet, object, iframe,
@@ -75,4 +77,27 @@ a{
 	max-width: 1450px;
 	margin:0 auto;
 	padding: 0 25px;
+}
+
+.tittle {
+	position: relative;
+	&:after {
+		width: 100%;
+		max-width: 150px;
+		height: 5px;
+		position: absolute;
+		content: " ";
+		background-color: #fff;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.btn-principal {
+	border: 2px solid #fff;
+	border-radius: 15px;
+	padding: 13px 28px;
+	color: #fff;
+	display: block;
+	max-width: max-content;
 }
